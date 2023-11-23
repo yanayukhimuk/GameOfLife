@@ -58,10 +58,9 @@ namespace GameOfLife
         void MouseMove(object sender, MouseEventArgs e)
         {
             var cellVisual = sender as Ellipse;
-            
-            int i = (int) cellVisual.Margin.Left / 5;
-            int j = (int) cellVisual.Margin.Top / 5;
-            
+
+            int i = (int)((Point)cellVisual.Tag).X;
+            int j = (int)((Point)cellVisual.Tag).Y;
 
             if (e.LeftButton == MouseButtonState.Pressed)
             {
